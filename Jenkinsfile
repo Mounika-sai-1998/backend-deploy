@@ -31,13 +31,14 @@ pipeline {
                 """
             }
         }
-        // stage('Plan') {
-        //     steps {
-        //         sh """
-        //             cd terraform
-        //             terraform plan -vars 
-        //     }
-        // }
+        stage('Plan') {
+            steps {
+                sh """
+                    cd terraform
+                    terraform plan -var="appVersion=${params.appVersion}" 
+                """
+            }
+        }
     }
         
     post {
