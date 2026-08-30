@@ -21,3 +21,8 @@ variable "common_tags" {
 variable "zone_name" {
     default = "lokesh.shop"
 }
+
+variable "appVersion" {
+  description = "Application version"
+  type        = string
+}
