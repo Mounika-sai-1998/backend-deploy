@@ -22,7 +22,7 @@ variable "zone_name" {
     default = "lokesh.shop"
 }
 
-variable "appVersion" {
+variable "app_version" {
   description = "Application version"
   type        = string
 }
