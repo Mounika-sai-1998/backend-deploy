@@ -34,6 +34,7 @@ pipeline {
         stage('Plan') {
             steps {
                 sh """
+                    pwd
                     cd terraform
                     terraform plan -var="appVersion=${params.appVersion}" 
                 """
