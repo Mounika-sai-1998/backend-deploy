@@ -13,7 +13,7 @@ pipeline {
     }
     environment {
         def appVersion = ''
-        nexusUrl = 'nexus.lokesh.shop'
+        nexusUrl = 'nexus.lokesh.shop:8081'
     }
     stages {
         stage('print Version') {
@@ -31,13 +31,13 @@ pipeline {
                 """
             }
         }
-        stage('Plan') {
-            steps {
-                sh """
-                    cd terraform
-                    terraform plan -vars 
-            }
-        }
+        // stage('Plan') {
+        //     steps {
+        //         sh """
+        //             cd terraform
+        //             terraform plan -vars 
+        //     }
+        // }
     }
         
     post {
