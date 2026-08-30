@@ -13,11 +13,7 @@ pipeline {
     }
     environment {
         def appVersion = ''
-<<<<<<< HEAD
         nexusUrl = 'nexus.lokesh.shop'
-=======
-        nexusUrl = '32.197.164.123:8081'
->>>>>>> 537848fcfff223fc6f91e280c0ca07c0ec850c52
     }
     stages {
         stage('print Version') {
@@ -27,7 +23,6 @@ pipeline {
                 }
             }
         }
-<<<<<<< HEAD
         stage('Init') {
             steps {
                 sh """
@@ -43,8 +38,6 @@ pipeline {
                     terraform plan -vars 
             }
         }
-=======
->>>>>>> 537848fcfff223fc6f91e280c0ca07c0ec850c52
     }
         
     post {
